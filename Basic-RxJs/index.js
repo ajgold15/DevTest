@@ -14,6 +14,8 @@ of('Hello').pipe(
   console.log(x);
 })
 
+//log: 'Hello World of RxJS'
+
 // - What will be logged to the console 
 of(1, 2, 3).pipe(
   map(x => x + 1),
@@ -22,6 +24,9 @@ of(1, 2, 3).pipe(
   console.log(x);
 })
 
+
 // - Subscription sequence 
+//logs: 3
+//logs: 4
 
 
