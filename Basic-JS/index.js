@@ -18,14 +18,30 @@ var objectF = {
 // end Global Varriables 
 
 // 1. Write a function that adds two given numbers
-
+function addNumbers(a, b) {
+    return a + b;
+}
 
 // 2. Adding 'objectF' to an 'objectArray'
-
+objectArray.push(objectF);
 
 // 3. Write a function that returns Id 3 from 'objectArray'
-
+function returnTargetElement() {
+    return objectArray.find((item) => item.Id === 3);
+}
 
 // 4. Write a function that merges 'people' with 'departmentInfo' based on department
-
-
+function mergePeopleAndDepartmentInfo() {
+    people = people.map((person) => {
+        departmentInfo.forEach((department) => {
+            if (person.department === department.department) {
+                person = {
+                    ...person,
+                    ...department,
+                };
+                return;
+            }
+        });
+        return person;
+    });
+}
